@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# IDE & Editor
+.vscode/
+.idea/
+
+# Logs & Temporary Files
+*.log
+*.tmp
+test_*.txt
+
+# Local SQLite databases (created dynamically in production/local)
+database/*.sqlite

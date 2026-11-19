@@ -1,0 +1,28 @@
+# ==========================================
+# Render.com Blueprint Specification
+# Laptop Store Management System (PHP + Tailwind CSS)
+# ==========================================
+services:
+  - type: web
+    name: laptop-store-pos
+    runtime: docker
+    plan: free
+    region: oregon
+    healthCheckPath: /index.php?page=login
+    envVars:
+      - key: PORT
+        value: 10000
+      # Optional: Connect to your remote MySQL database (e.g. Aiven, TiDB, Clever Cloud, Railway)
+      # If left empty, the application automatically uses built-in SQLite with seeded catalog!
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: 3306
+      - key: DB_NAME
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASS
+        sync: false
+      - key: DATABASE_URL
+        sync: false
