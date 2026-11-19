@@ -7,7 +7,7 @@ services:
     name: laptop-store-pos
     runtime: docker
     plan: free
-    region: oregon
+    region: singapore
     healthCheckPath: /index.php?page=login
     envVars:
       - key: PORT
